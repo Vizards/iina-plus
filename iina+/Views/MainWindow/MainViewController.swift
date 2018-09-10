@@ -221,6 +221,10 @@ class MainViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadBilibiliCards()
+        if let vc = danmakuWindowController?.contentViewController as? DanmakuViewController {
+            vc.testedBilibiliAPI()
+        }
+        
         bookmarkArrayController.sortDescriptors = dataManager.sortDescriptors
         bookmarkTableView.backgroundColor = .clear
         bookmarkTableView.registerForDraggedTypes([.bookmarkRow])

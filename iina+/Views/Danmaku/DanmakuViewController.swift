@@ -123,38 +123,71 @@ class DanmakuViewController: NSViewController {
     }
     
     func testedBilibiliAPI() {
-        let p = ["aid": 31027408,
-                 "appkey": "1d8b6e7d45233436",
-                 "build": 5310000,
-                 "mobi_app": "android",
-                 "oid": 54186450,
-                 "plat":2,
-                 "platform": "android",
-                 "ps": 0,
-                 "ts": 1536407932,
-                 "type": 1,
-                 "sign": 0] as [String : Any]
-        HTTP.GET("https://api.bilibili.com/x/v2/dm/list.so", parameters: p) { re in
-            let data = re.data
-            let head = data.subdata(in: 0..<4)
-            let endIndex = Int(CFSwapInt32(head.withUnsafeBytes { (ptr: UnsafePointer<UInt32>) in ptr.pointee })) + 4
-            let d1 = data.subdata(in: 4..<endIndex)
+        let id = "av31234533"
+        
+        if let aid = Int(id.replacingOccurrences(of: "av", with: "")) {
+            var cid = 0
             
-            let d2 = data.subdata(in: endIndex..<data.endIndex)
+            let group = DispatchGroup()
+            group.enter()
+            Bilibili().getVideoList(aid, { vInfo in
+//                if vInfo.count == 1 {
+                    cid = vInfo[0].cid
+//                } else if let p = url.query?.replacingOccurrences(of: "p=", with: ""),
+//                    var pInt = Int(p) {
+//                    pInt -= 1
+//                    if pInt < vInfo.count,
+//                        pInt >= 0 {
+//                        cid = vInfo[pInt].cid
+//                    }
+//                }
+                group.leave()
+            }) { re in
+                do {
+                    let _ = try re()
+                } catch let error {
+                    Logger.log("Get cid for danmamu error: \(error)")
+                    group.leave()
+                }
+            }
             
-            let d3 = try! d2.gunzipped()
             
-            let str1 = String(data: d1, encoding: .utf8)
-            let str2 = String(data: d3, encoding: .utf8)
+            group.notify(queue: .main) {
+                guard cid != 0 else { return }
+                
+                let p = ["aid": aid,
+                         "appkey": "1d8b6e7d45233436",
+                         "build": 5310000,
+                         "mobi_app": "android",
+                         "oid": cid,
+                         "plat":2,
+                         "platform": "android",
+                         "ps": 0,
+                         "ts": Int(Date().timeIntervalSince1970),
+                         "type": 1,
+                         "sign": 0] as [String : Any]
+                HTTP.GET("https://api.bilibili.com/x/v2/dm/list.so", parameters: p) { re in
+                    let data = re.data
+                    let head = data.subdata(in: 0..<4)
+                    let endIndex = Int(CFSwapInt32(head.withUnsafeBytes { (ptr: UnsafePointer<UInt32>) in ptr.pointee })) + 4
+                    let d1 = data.subdata(in: 4..<endIndex)
+                    
+                    let d2 = data.subdata(in: endIndex..<data.endIndex)
+                    
+                    let d3 = try! d2.gunzipped()
+                    
+                    let str1 = String(data: d1, encoding: .utf8)
+                    let str2 = String(data: d3, encoding: .utf8)
+                    
+                                FileManager.default.createFile(atPath: "/Users/xjbeta/Downloads/d1", contents: d1, attributes: nil)
+                    
+                                FileManager.default.createFile(atPath: "/Users/xjbeta/Downloads/d2", contents: d3, attributes: nil)
+                    
+                }
+            }
             
-//            FileManager.default.createFile(atPath: "/Users/xjbeta/Downloads/d1", contents: d1, attributes: nil)
-//            
-//            FileManager.default.createFile(atPath: "/Users/xjbeta/Downloads/d2", contents: d3, attributes: nil)
             
         }
-        
-        
-        
         
     }
     
