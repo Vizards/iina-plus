@@ -1,8 +1,8 @@
 //
-//  BilibiliLoginViewController.swift
+//  DouyuLoginViewController.swift
 //  iina+
 //
-//  Created by xjbeta on 2018/8/6.
+//  Created by Vizards on 2018/12/12.
 //  Copyright © 2018 xjbeta. All rights reserved.
 //
 
@@ -10,14 +10,14 @@ import Cocoa
 import WebKit
 import SwiftHTTP
 
-class BilibiliLoginViewController: NSViewController {
-
+class DouyuLoginViewController: NSViewController {
+    
     @IBOutlet weak var tabView: NSTabView!
     @IBOutlet weak var viewForWeb: NSView!
     @IBOutlet weak var waitProgressIndicator: NSProgressIndicator!
     var webView: WKWebView!
     var dismiss: (() -> Void)?
-    let bilibili = Bilibili()
+    let douyu = Douyu()
     @IBAction func tryAgain(_ sender: Any) {
         loadWebView()
     }
@@ -39,14 +39,17 @@ class BilibiliLoginViewController: NSViewController {
         }
     }
     
+    
     func loadWebView() {
         tabView.selectTabViewItem(at: 0)
         
-        let url = URL(string: "https://passport.bilibili.com/login")
+        let url = URL(string: "https://passport.douyu.com/index/login")
         let script = """
-document.getElementsByClassName("sns")[0].remove();
-document.getElementsByClassName("btn btn-reg")[0].remove()
+document.querySelector(".loginbox-close").remove();
+document.querySelector(".third-text").remove();
+document.querySelector(".third-list").remove();
 """
+        
         // WebView Config
         let contentController = WKUserContentController()
         let scriptInjection = WKUserScript(source: script, injectionTime: .atDocumentEnd, forMainFrameOnly: false)
@@ -62,7 +65,7 @@ document.getElementsByClassName("btn btn-reg")[0].remove()
         viewForWeb.addSubview(webView)
         webView.isHidden = false
         
-        let request = URLRequest(url: url!)
+        let request = URLRequest(url: url!);
         webView.customUserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1"
         webView.load(request)
     }
@@ -73,18 +76,14 @@ document.getElementsByClassName("btn btn-reg")[0].remove()
         waitProgressIndicator.isHidden = false
         waitProgressIndicator.startAnimation(self)
     }
-    
 }
 
-
-
-extension BilibiliLoginViewController: WKNavigationDelegate {
-    
-    func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
-        if let str = webView.url?.absoluteString, str.contains("bili_jct") {
+extension DouyuLoginViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        if let str = webView.url?.absoluteString, str.contains("api") {
             displayWait()
             
-            Bilibili().isLogin().done(on: .main) {
+            douyu.isLogin().done(on: .main) {
                 if $0.0 {
                     self.dismiss?()
                 } else {
@@ -95,7 +94,6 @@ extension BilibiliLoginViewController: WKNavigationDelegate {
             }
         }
     }
-
     
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         let nserr = error as NSError
@@ -113,5 +111,4 @@ extension BilibiliLoginViewController: WKNavigationDelegate {
             }
         }
     }
-    
 }

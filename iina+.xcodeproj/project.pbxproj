@@ -16,8 +16,8 @@
 		01010137211EFA75002F0F7F /* SuggestionsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01010136211EFA75002F0F7F /* SuggestionsTableView.swift */; };
 		0101013921200DC5002F0F7F /* LiveUrlTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0101013821200DC5002F0F7F /* LiveUrlTableCellView.swift */; };
 		010F0EF220F890DB00F33553 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F0EF120F890DB00F33553 /* MainWindowController.swift */; };
-		010F0F1020FCC1EA00F33553 /* Marshal.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 010F0F0120FCC16700F33553 /* Marshal.framework.dSYM */; };
-		010F0F1120FCC1EA00F33553 /* SwiftHTTP.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 010F0EFF20FCC16600F33553 /* SwiftHTTP.framework.dSYM */; };
+		010F0F1020FCC1EA00F33553 /* Marshal.framework.dSYM in Copy Files */ = {isa = PBXBuildFile; fileRef = 010F0F0120FCC16700F33553 /* Marshal.framework.dSYM */; };
+		010F0F1120FCC1EA00F33553 /* SwiftHTTP.framework.dSYM in Copy Files */ = {isa = PBXBuildFile; fileRef = 010F0EFF20FCC16600F33553 /* SwiftHTTP.framework.dSYM */; };
 		010F0F1320FE1DD100F33553 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F0F1220FE1DD100F33553 /* Preferences.swift */; };
 		010F0F1920FE4F0900F33553 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 010F0F1720FE4F0900F33553 /* DataModel.xcdatamodeld */; };
 		01260171211948BF00C9C639 /* PreferencesTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01260170211948BF00C9C639 /* PreferencesTabViewController.swift */; };
@@ -32,10 +32,10 @@
 		013CE8E021854813000271FB /* VideoGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013CE8DF21854813000271FB /* VideoGet.swift */; };
 		013CE8E421854832000271FB /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013CE8E221854832000271FB /* PromiseKit.framework */; };
 		013CE8E62185483D000271FB /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 013CE8E221854832000271FB /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		013CE8E72185485A000271FB /* PromiseKit.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 013CE8E121854832000271FB /* PromiseKit.framework.dSYM */; };
+		013CE8E72185485A000271FB /* PromiseKit.framework.dSYM in Copy Files */ = {isa = PBXBuildFile; fileRef = 013CE8E121854832000271FB /* PromiseKit.framework.dSYM */; };
 		013CE8EA2185CB1A000271FB /* Swifter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013CE8E82185CB1A000271FB /* Swifter.framework */; };
 		013CE8ED2185CB27000271FB /* Swifter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 013CE8E82185CB1A000271FB /* Swifter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		013CE8EE2185CB40000271FB /* Swifter.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 013CE8E92185CB1A000271FB /* Swifter.framework.dSYM */; };
+		013CE8EE2185CB40000271FB /* Swifter.framework.dSYM in Copy Files */ = {isa = PBXBuildFile; fileRef = 013CE8E92185CB1A000271FB /* Swifter.framework.dSYM */; };
 		013CE8F02185D0EA000271FB /* default.css in Copy Danamaku Files */ = {isa = PBXBuildFile; fileRef = 01E8CAC4213D236E00C4939B /* default.css */; };
 		013CE8F12185D0EA000271FB /* index.htm in Copy Danamaku Files */ = {isa = PBXBuildFile; fileRef = 01E8CAC5213D236E00C4939B /* index.htm */; };
 		013CE8F22185D0EA000271FB /* main.js in Copy Danamaku Files */ = {isa = PBXBuildFile; fileRef = 01E8CAC6213D236E00C4939B /* main.js */; };
@@ -70,14 +70,14 @@
 		01AEC8C920F1081C001406E8 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AEC8C820F1081C001406E8 /* Identifiers.swift */; };
 		01B107D42144094200A66BC1 /* Gzip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B107D22144094200A66BC1 /* Gzip.framework */; };
 		01B107D72144094B00A66BC1 /* Gzip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01B107D22144094200A66BC1 /* Gzip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		01B107D82144095700A66BC1 /* Gzip.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01B107D32144094200A66BC1 /* Gzip.framework.dSYM */; };
+		01B107D82144095700A66BC1 /* Gzip.framework.dSYM in Copy Files */ = {isa = PBXBuildFile; fileRef = 01B107D32144094200A66BC1 /* Gzip.framework.dSYM */; };
 		01B107D92144FEA300A66BC1 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E8CACF213D541600C4939B /* SocketRocket.framework */; };
 		01B107DA2144FEA300A66BC1 /* SocketRocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01E8CACF213D541600C4939B /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01E6A09C211AD62800C6EF98 /* VideoDurationFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6A09B211AD62800C6EF98 /* VideoDurationFormatter.swift */; };
 		01E8CAC0213C174800C4939B /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E8CABD213C173F00C4939B /* Socket.framework */; };
 		01E8CAC1213C174800C4939B /* Socket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01E8CABD213C173F00C4939B /* Socket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		01E8CAC2213C175000C4939B /* Socket.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01E8CABC213C173F00C4939B /* Socket.framework.dSYM */; };
-		01E8CAD5213D543900C4939B /* SocketRocket.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01E8CAD0213D541700C4939B /* SocketRocket.framework.dSYM */; };
+		01E8CAC2213C175000C4939B /* Socket.framework.dSYM in Copy Files */ = {isa = PBXBuildFile; fileRef = 01E8CABC213C173F00C4939B /* Socket.framework.dSYM */; };
+		01E8CAD5213D543900C4939B /* SocketRocket.framework.dSYM in Copy Files */ = {isa = PBXBuildFile; fileRef = 01E8CAD0213D541700C4939B /* SocketRocket.framework.dSYM */; };
 		01F46CA12102EF4600FE9DAD /* GereralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F46CA02102EF4600FE9DAD /* GereralViewController.swift */; };
 		01F5151A2109F002007C7153 /* LiveStatusTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F515192109F002007C7153 /* LiveStatusTableCellView.swift */; };
 		01F6C4E9213396560009672A /* DevMateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F6C4E5213396270009672A /* DevMateKit.framework */; };
@@ -86,23 +86,26 @@
 		01F6C4ED213396560009672A /* Marshal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 010F0EFE20FCC16600F33553 /* Marshal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01F6C4F02133965E0009672A /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010F0F0020FCC16700F33553 /* SwiftHTTP.framework */; };
 		01F6C4F12133965E0009672A /* SwiftHTTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 010F0F0020FCC16700F33553 /* SwiftHTTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E3032EAE21C1625A0050B7F3 /* DouyuLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3032EAD21C1625A0050B7F3 /* DouyuLoginViewController.swift */; };
+		E320B09721C3AAFC0089722C /* Douyu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E320B09621C3AAFC0089722C /* Douyu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		010F0F0F20FCC1D200F33553 /* CopyFiles */ = {
+		010F0F0F20FCC1D200F33553 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				013CE8EE2185CB40000271FB /* Swifter.framework.dSYM in CopyFiles */,
-				013CE8E72185485A000271FB /* PromiseKit.framework.dSYM in CopyFiles */,
-				01B107D82144095700A66BC1 /* Gzip.framework.dSYM in CopyFiles */,
-				01E8CAD5213D543900C4939B /* SocketRocket.framework.dSYM in CopyFiles */,
-				01E8CAC2213C175000C4939B /* Socket.framework.dSYM in CopyFiles */,
-				010F0F1020FCC1EA00F33553 /* Marshal.framework.dSYM in CopyFiles */,
-				010F0F1120FCC1EA00F33553 /* SwiftHTTP.framework.dSYM in CopyFiles */,
+				013CE8EE2185CB40000271FB /* Swifter.framework.dSYM in Copy Files */,
+				013CE8E72185485A000271FB /* PromiseKit.framework.dSYM in Copy Files */,
+				01B107D82144095700A66BC1 /* Gzip.framework.dSYM in Copy Files */,
+				01E8CAD5213D543900C4939B /* SocketRocket.framework.dSYM in Copy Files */,
+				01E8CAC2213C175000C4939B /* Socket.framework.dSYM in Copy Files */,
+				010F0F1020FCC1EA00F33553 /* Marshal.framework.dSYM in Copy Files */,
+				010F0F1120FCC1EA00F33553 /* SwiftHTTP.framework.dSYM in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		013CE8EF2185D09F000271FB /* Copy Danamaku Files */ = {
@@ -227,6 +230,8 @@
 		01F515192109F002007C7153 /* LiveStatusTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStatusTableCellView.swift; sourceTree = "<group>"; };
 		01F6C4E5213396270009672A /* DevMateKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DevMateKit.framework; path = Carthage/Build/Mac/DevMateKit.framework; sourceTree = SOURCE_ROOT; };
 		01F6C4F2213396B20009672A /* iina+-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iina+-Bridging-Header.h"; sourceTree = "<group>"; };
+		E3032EAD21C1625A0050B7F3 /* DouyuLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouyuLoginViewController.swift; sourceTree = "<group>"; };
+		E320B09621C3AAFC0089722C /* Douyu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Douyu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +339,7 @@
 				0196CB61212143D600BCD29E /* Logger.swift */,
 				01010124211DBC27002F0F7F /* StringExtension.swift */,
 				01AEC8C120EFBCCF001406E8 /* MPVOption.swift */,
+				E320B09621C3AAFC0089722C /* Douyu.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 				01F46CA02102EF4600FE9DAD /* GereralViewController.swift */,
 				01260170211948BF00C9C639 /* PreferencesTabViewController.swift */,
 				01398984210F27A600B7042F /* PreferencesWindowController.swift */,
+				E3032EAD21C1625A0050B7F3 /* DouyuLoginViewController.swift */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
@@ -459,7 +466,7 @@
 				01AEC8A320EDFD01001406E8 /* Sources */,
 				01AEC8A420EDFD01001406E8 /* Frameworks */,
 				01AEC8A520EDFD01001406E8 /* Resources */,
-				010F0F0F20FCC1D200F33553 /* CopyFiles */,
+				010F0F0F20FCC1D200F33553 /* Copy Files */,
 				019BFF5D212485B900E715CC /* ShellScript */,
 				01F6C4EA213396560009672A /* Embed Frameworks */,
 				01C232E52134EBDD0021C28F /* Copy Executables */,
@@ -589,6 +596,7 @@
 				014B447D210069FF00E7AA6A /* Bookmark.swift in Sources */,
 				01398987210F58E500B7042F /* MainWindowTableRowView.swift in Sources */,
 				01AEC8BC20EDFFBD001406E8 /* YouGetJSON.swift in Sources */,
+				E3032EAE21C1625A0050B7F3 /* DouyuLoginViewController.swift in Sources */,
 				0132B2E52123D68D001EB7DC /* BilibiliCardImageBoxView.swift in Sources */,
 				01683DD9211869AE0016A886 /* BilibiliLoginViewController.swift in Sources */,
 				0196CB62212143D600BCD29E /* Logger.swift in Sources */,
@@ -598,6 +606,7 @@
 				010F0EF220F890DB00F33553 /* MainWindowController.swift in Sources */,
 				01010132211E987D002F0F7F /* WaitingTableCellView.swift in Sources */,
 				013CE8E021854813000271FB /* VideoGet.swift in Sources */,
+				E320B09721C3AAFC0089722C /* Douyu.swift in Sources */,
 				01683DDE211924160016A886 /* BilibiliViewController.swift in Sources */,
 				01AEC8AB20EDFD01001406E8 /* AppDelegate.swift in Sources */,
 				01010137211EFA75002F0F7F /* SuggestionsTableView.swift in Sources */,
